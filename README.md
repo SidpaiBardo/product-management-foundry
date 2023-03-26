@@ -1,5 +1,82 @@
 # product-management-foundry
 
+// Logic Model Data Object
+const logicModel = {
+  inputs: [
+    { id: 1, name: "Donations", description: "Amount of money donated" },
+    { id: 2, name: "Volunteers", description: "Number of volunteers" },
+    { id: 3, name: "Programs", description: "Number of programs offered" },
+  ],
+  activities: [
+    { id: 1, name: "Fundraising events", description: "Organizing events to raise funds" },
+    { id: 2, name: "Volunteer training", description: "Providing training to volunteers" },
+    { id: 3, name: "Program development", description: "Developing new programs to meet needs" },
+  ],
+  outputs: [
+    { id: 1, name: "Funds raised", description: "Amount of money raised from donations" },
+    { id: 2, name: "Volunteer hours", description: "Number of hours volunteered" },
+    { id: 3, name: "Program participants", description: "Number of people participating in programs" },
+  ],
+  outcomes: [
+    { id: 1, name: "Increased awareness", description: "More people are aware of the organization's mission" },
+    { id: 2, name: "Improved quality of life", description: "People's lives are improved through the organization's programs" },
+    { id: 3, name: "Increased sustainability", description: "The organization is able to sustain its activities and growth" },
+  ],
+};
+
+// User Persona Data Object
+const userPersonas = [
+  {
+    id: 1,
+    name: "Samantha",
+    age: 35,
+    gender: "Female",
+    interests: "Social justice, education",
+    needs: "Easy ways to donate, volunteer opportunities",
+    painPoints: "Limited time, financial constraints",
+  },
+  {
+    id: 2,
+    name: "John",
+    age: 50,
+    gender: "Male",
+    interests: "Healthcare, community service",
+    needs: "Ways to get involved, impact measurement",
+    painPoints: "Lack of trust in nonprofits, limited resources",
+  },
+];
+
+// Jobs-to-be-Done Data Object
+const jobsToBeDone = [
+  {
+    personaId: 1,
+    functionalGoal: "Donate money to support the cause",
+    socialGoal: "Show support for the organization and its mission",
+    emotionalGoal: "Feel good about contributing to a worthy cause",
+  },
+  {
+    personaId: 2,
+    functionalGoal: "Find volunteer opportunities in the community",
+    socialGoal: "Connect with other like-minded people and make a difference",
+    emotionalGoal: "Feel fulfilled and make a positive impact on others",
+  },
+];
+
+// User Journey Maps Data Object
+const userJourneyMaps = [
+  {
+    personaId: 1,
+    stages: [
+      {
+        name: "Awareness",
+        touchpoints: [
+          { id: 1, name: "Social media post", description: "Sees a post about the organization on social media" },
+          { id: 2, name: "Word of mouth", description: "Hears about the organization from a friend or family member" },
+        ],
+        emotionalStates: [
+          { id: 1, name: "Curiosity", description: "Wants to learn more about the organization" },
+
+
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, TextField, Checkbox, FormControlLabel, Select, MenuItem, Button, AppBar, Toolbar, IconButton, Drawer, List, ListItem, ListItemText } from '@material-ui/core';
